@@ -208,7 +208,7 @@ public class ScriptRunner {
       println(command);
       executeStatement(command.toString());
       command.setLength(0);
-    } else if (trimmedLine.length() > 0) {
+    } else {
       command.append(line);
       command.append(LINE_SEPARATOR);
     }
