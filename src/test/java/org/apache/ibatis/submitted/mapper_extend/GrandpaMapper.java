@@ -1,5 +1,5 @@
 /**
- *    Copyright 2009-2015 the original author or authors.
+ *    Copyright 2009-2017 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -13,28 +13,13 @@
  *    See the License for the specific language governing permissions and
  *    limitations under the License.
  */
-package org.apache.ibatis.submitted.automatic_lazy_loading;
 
-import java.io.Serializable;
+package org.apache.ibatis.submitted.mapper_extend;
 
-public class Element implements Serializable {
-  private Element element;
+public interface GrandpaMapper {
 
-  private String value;
+  User getUserByName(String name);
 
-  public Element getElement() {
-    return element;
-  }
+  User noMappedStatement();
 
-  public void setElement(Element anElement) {
-    element = anElement;
-  }
-
-  public String getValue() {
-    return value;
-  }
-
-  public void setValue(String aValue) {
-    value = aValue;
-  }
 }
